@@ -486,7 +486,7 @@ BOTTOM MENU :nth-child() */
 .wrapper-btn .ghost-btn a {
     border: 1px solid var(--white);
     border-radius: 3px;
-   padding: 20px 100px 20px 20px;}
+   padding: 20px 99px 20px 20px;}
  
 .wrapper-btn .ghost-btn a:hover {border: 1px solid var(--blue-btn-hover);}
 .wrapper-btn .ghost-btn a:active {
@@ -499,7 +499,7 @@ BOTTOM MENU :nth-child() */
     position: absolute;;
     content: '';
     top: 24px;
-    right: 30px;
+    right: 40px;
 
     width: 20px;
     height: 20px;
@@ -510,8 +510,13 @@ BOTTOM MENU :nth-child() */
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    
+    transition: .3s ease-in;
 }
+
+.wrapper-btn .ghost-btn:hover::after {
+    right: 10px;
+    transition: .3s ease-in;
+} 
 /* 
 BENEFITS SECTION */
    
@@ -780,6 +785,15 @@ BENEFITS SECTION */
 @media (max-width:470.98px) {
     .main-section-header h1 ,
     .btn-main {margin-bottom: 20px;}
+
+    .wrapper-btn  { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-btn button {margin-right: 0;}
 }
 
 @media (max-width: 375.98px) {
